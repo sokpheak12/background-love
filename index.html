@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+    
+    <body>
+        <div id="container">
+            Send To You 💗🫀?
+        </div>
+        <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+    </body>
+
+
+    <script>
+        const body = document.querySelector("body");
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "fas fa-heart";
+            heart.style.left = (Math.random() * 100)+"vw";
+            heart.style.animationDuration = (Math.random()*3)+2+"s"
+            body.appendChild(heart);
+        }
+        setInterval(createHeart,100);
+        setInterval(function name(params) {
+            var heartArr = document.querySelectorAll(".fa-heart")
+            if (heartArr.length > 200) {
+            heartArr[0].remove()
+            }
+            //console.log(heartArr);
+        },100)
+
+    </script>
+</html>
