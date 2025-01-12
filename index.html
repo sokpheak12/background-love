@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart</title>
     <link rel="stylesheet" href="background.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
     
-    <body>
-        <div id="container">
-            > Do you heav a Boyfriend... ? 💗🫀
-        </div>
-        <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-    </body>
-
+<body>
+    <div id="container">
+        > Do you have a boyfriend 💗🫀?
+    </div>
 
     <script>
         const body = document.querySelector("body");
@@ -21,18 +20,19 @@
         function createHeart() {
             const heart = document.createElement("div");
             heart.className = "fas fa-heart";
-            heart.style.left = (Math.random() * 100)+"vw";
-            heart.style.animationDuration = (Math.random()*3)+2+"s"
+            heart.style.left = (Math.random() * 100) + "vw";
+            heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
             body.appendChild(heart);
         }
-        setInterval(createHeart,100);
-        setInterval(function name(params) {
-            var heartArr = document.querySelectorAll(".fa-heart")
-            if (heartArr.length > 200) {
-            heartArr[0].remove()
-            }
-            //console.log(heartArr);
-        },100)
 
+        setInterval(createHeart, 100);
+
+        setInterval(function () {
+            var heartArr = document.querySelectorAll(".fa-heart");
+            if (heartArr.length > 200) {
+                heartArr[0].remove();
+            }
+        }, 100);
     </script>
+</body>
 </html>
